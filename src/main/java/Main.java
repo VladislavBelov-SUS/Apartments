@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
+    private String kick;
     private static final String DB_URL = "jdbc:mysql://localhost:3306/apartmentsdb?serverTimezone=Europe/Kiev";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "root";
@@ -12,6 +13,7 @@ public class Main {
     private static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
+
 
     public static void main(String[] args) {
         try {
