@@ -75,6 +75,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667211362848</updated>
+      <workItem from="1667314904626" duration="51000" />
+      <workItem from="1667317675874" duration="402000" />
     </task>
     <task id="LOCAL-00001" summary="tini">
       <created>1667215735586</created>
@@ -97,8 +99,18 @@
       <option name="project" value="LOCAL" />
       <updated>1667304240408</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="homework task solved">
+      <created>1667314941545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667314941545</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
