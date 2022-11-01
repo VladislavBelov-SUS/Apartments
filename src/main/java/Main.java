@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    private  String KICK;
+    private  String KICK2;
     private static final String DB_URL = "jdbc:mysql://localhost:3306/apartmentsdb?serverTimezone=Europe/Kiev";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "root";
