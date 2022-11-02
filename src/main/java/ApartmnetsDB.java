@@ -22,6 +22,7 @@ public final class ApartmnetsDB implements Apartmnets {
         }
     }
 
+    @Override
     public void addApartment(
             final String region,
             final String address,
@@ -33,6 +34,7 @@ public final class ApartmnetsDB implements Apartmnets {
         insert(region, address, area, number, price);
     }
 
+    @Override
     public void insert(
             final String region, final String address,
             final double area, final int number, final double price
@@ -48,6 +50,7 @@ public final class ApartmnetsDB implements Apartmnets {
         }
     }
 
+    @Override
     public void insertRandomApartment() throws SQLException {
         final Random random = new Random();
         final String[] addresses = {"1, Sonyachna st., Boyarka, Ukraine",
@@ -72,6 +75,7 @@ public final class ApartmnetsDB implements Apartmnets {
         }
     }
 
+    @Override
     public void deleteApartment(final int id) throws SQLException {
         final String sql = "DELETE FROM Apartments WHERE id = ?;";
         try (PreparedStatement ps = connection.prepareStatement(sql)) {
@@ -80,6 +84,7 @@ public final class ApartmnetsDB implements Apartmnets {
         }
     }
 
+    @Override
     public void changeApartmentPrice(final int id, final double price) throws SQLException {
         final String sql = "UPDATE Apartments SET price = ? WHERE id = ?;";
         try (PreparedStatement ps = connection.prepareStatement(sql)) {
@@ -89,10 +94,12 @@ public final class ApartmnetsDB implements Apartmnets {
         }
     }
 
+    @Override
     public void viewApartments() throws SQLException {
         viewApartments("SELECT * FROM Apartments;");
     }
 
+    @Override
     public void viewApartments(final String str) throws SQLException {
         try (PreparedStatement ps = connection.prepareStatement(str);
              ResultSet rs = ps.executeQuery()) {
@@ -110,21 +117,25 @@ public final class ApartmnetsDB implements Apartmnets {
         }
     }
 
+    @Override
     public void selectionByRegion(final String region) throws SQLException {
         final String sql = "SELECT * FROM Apartments WHERE region = " + region + ";";
         viewApartments(sql);
     }
 
+    @Override
     public void selectionByPrice(final double priceMin, final double priceMax) throws SQLException {
         final String sql = "SELECT * FROM Apartments WHERE price BETWEEN " + priceMin + " and " + priceMax + ";";
         viewApartments(sql);
     }
 
+    @Override
     public void selectionByArea(final double areaMin, final double areaMax) throws SQLException {
         final String sql = "SELECT * FROM Apartments WHERE area BETWEEN " + areaMin + " AND " + areaMax + ";";
         viewApartments(sql);
     }
 
+    @Override
     public void selectionByRoom(final double numberMin, final double numberMax) throws SQLException {
         final String sql = "SELECT * FROM Apartments WHERE rooms BETWEEN " + numberMin + " AND " + numberMax + ";";
         viewApartments(sql);
