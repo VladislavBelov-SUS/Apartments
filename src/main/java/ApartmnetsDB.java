@@ -4,6 +4,7 @@ import java.util.Random;
 public final class ApartmnetsDB implements Apartmnets {
     private final Connection connection;
 
+
     public ApartmnetsDB(final Connection connection) throws SQLException {
         this.connection = connection;
         initDB();
